@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Please locate where 'locate' occurs last</p>
+
+<button onclick='myFunction()'>locate it</button>
+
+<p id='demo'></p>
+
+<script>
+function myFunction() {
+	var str = document.getElementById('p1').innerHTML;
+	var pos = str.lastIndexOf("locate");
+	document.getElementById("demo").innerHTML = pos;
+}
+</script>
+<!-- both the indexOf() and lastIndexOf() methods return -1 if the text is not found -->
+<!-- both accepts a second parameter as the starting position for the search -->
+<!-- the search() method does the same as indexOf() but is more powerful and can include regular expression -->
+</body>
+</html>
