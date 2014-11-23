@@ -1,0 +1,84 @@
+JS notes
+
+
+
+-http://www.lynda.com/JavaScript-tutorials/Getting-setting-value-text-field/144203/153517-4.html
+
+-getting value of a text field
+
+-- getElementById().value =33 or gEBI().value to return info
+
+-- document.forms[0].txt_cold.value;
+	--- goes into the first form and pulls the value from the field with the name txt_cold
+
+-- document.getElementById('cart-oil').txt_cold.value
+	--- goes into the id and then the field
+
+-getting the value of select box or pop up menu
+
+
+- checking options/radio button  to see if it's checked
+	-- var methods = document.getElementById('cart-oil').r_method; 
+		-- gets radio button field
+	-- for (var i = 0; i < methods.length; i++) {
+		if(methods[i].checked == true){
+		alert(methods[i].value);
+		}
+	}
+
+- document.getElementById('c-special-gift').checked
+		- returns true or false
+		- the checked property is the one you want to look at for 
+		checkboxes
+
+
+- getting the submit button to work
+	- document.getElementById('cart-oil').addEventListener('submit', estimateTotal);
+		-- it first looks as the form 'cart-oil' and add an event listener to see if anything happends. 
+		-- the function needs two arguments: an event and function.
+
+	- functionestimateTotal(event) {
+		event.preventDefault();
+
+		console.log("You got here safely.");
+	}
+		-- stops it from reloading and doing what it usually do and only do what you state
+		-- use the console.log to check that it worked properly and that the page didn't break
+
+- you can use "required" in html 5 if you don't want to use JS in html 5
+	
+	- functionestimateTotal(event) {
+		event.preventDefault();
+		if (document.getElementById('s-state').value ==='') {
+			alert('Please choose your shipping state.');
+
+			document.getElementById('s-sate').focus();
+		}
+
+		var btlExtra = document.getElementById('txt-q-extra'),
+		var btlCold = document.getElementById('txt-q-cold'),
+		var btlGarlic = document.getElementById('txt-q-garlic'),
+		var state = document.getElementById('s-state'),
+		shippingMethod;
+
+	var method = document.getElementById('cart-oil').r_method;
+
+	for (var i= 0; i <methods.length; i++) {
+		if (methods[i].checked == true) {
+		shippingMethod = methods[i].value;
+
+		}
+	}
+	console.log(btlExtra);
+	console.log(btlCold);
+	console.log(btlGarlic);
+	console.log(state);
+	console.log(shippingMethod);
+
+	}
+		-- .focus() method to focus
+
+
+
+
+
