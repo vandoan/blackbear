@@ -55,11 +55,35 @@ JS notes
 			document.getElementById('s-sate').focus();
 		}
 
-		var btlExtra = document.getElementById('txt-q-extra'),
-		var btlCold = document.getElementById('txt-q-cold'),
-		var btlGarlic = document.getElementById('txt-q-garlic'),
-		var state = document.getElementById('s-state'),
-		shippingMethod;
+		var shippingCost = ((btlExtra + btlCold + btlGarlic) shippingCostPer;
+
+		var subtotal = ((btlExtra *10) + (btl * 8) + (btlGarlic * 10)) * taxFactor;
+
+		var btlExtra = parseInt(document.getElementById('txt-q-extra').value, 10) || 0,
+		var btlCold = parseInt(document.getElementById('txt-q-cold').value, 10) || 0
+		var btlGarlic = parseInt(document.getElementById('txt-q-garlic').value, 10) || 0
+		var state = parseInt(document.getElementById('s-state'),
+		shippingMethod);
+
+		var taxFactor = 1;
+		if (state == 'CA'){taxFactor =1.075; }
+
+		switch (shippingMethod) {
+		case 'pickup' : 
+			shippingCost = 0;
+			break;
+
+		switch (shippingMethod) {
+		case 'usps' : 
+			shippingCost = 2;
+			break;
+
+		switch (shippingMethod) {
+		case 'ups' : 
+			shippingCost = 3;
+			break;
+			
+		}
 
 	var method = document.getElementById('cart-oil').r_method;
 
@@ -75,10 +99,13 @@ JS notes
 	console.log(state);
 	console.log(shippingMethod);
 
-	}
+
 		-- .focus() method to focus
 
+		var estimate = "$" + (subtotal + shippingCost).toFixed(2);
+		document.getElementById('txt-estimate').value = estimate;
 
+	}
 
 
 
