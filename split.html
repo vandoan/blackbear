@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+	<p>Click the button to display the first araay element</p>
+	<button onclick='dumbo()'>click me</button>
+	<p id="here"></p>
+<script>
+function dumbo() {
+	var str ="dog, pig, cat, pie, frog, deer";
+	var arr = str.split(",");
+	document.getElementById("here").innerHTML = arr[0];
+}
+</script>
+</body>
+</html>
