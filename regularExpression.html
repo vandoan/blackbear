@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+	<p>Search a string for "frogs" and display the position</p>
+	<button onclick='dumbo()'>click me</button>
+	<p id="here"></p>
+<script>
+function dumbo() {
+	var str = "Some blue frogs live in Montanta!";
+	var n = str.search(/frogs/i);
+	document.getElementById("here").innerHTML = n;
+}
+</script>
+</body>
+</html>

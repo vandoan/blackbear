@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- http://www.w3schools.com/js/js_regexp.asp -->
+
+	<p>Search for an "e" in the next paragraph</p>
+
+	<p id="p01">The best things in life are free!</p>
+
+	<button onclick='dumbo()'>click, click</button>
+	<p id='here'></p>
+<script>
+function dumbo() {
+	var text = document.getElementById("p01").innerHTML;
+	document.getElementById("here").innerHTML = /e/.test(text);
+}
+</script>
+</body>
+</html>

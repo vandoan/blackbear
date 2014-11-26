@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- http://www.w3schools.com/js/js_regexp.asp -->
+
+	<p>Find the donkey and replace him with a frog, and i for insensitive</p>
+	<button onclick='dumbo()'>click, click</button>
+	<p id="here">Watchout for donkeys!</p>
+<script>
+function dumbo() {
+	var str = document.getElementById("here").innerHTML;
+	var txt = str.replace(/donkey/i, 'frog');
+	document.getElementById("here").innerHTML = txt;
+}
+</script>
+</body>
+</html>
