@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- http://www.w3schools.com/js/js_regexp.asp -->
+
+	<p>Is Java enabled?</p>
+
+	<button onclick='mumbo()'>click, click</button>
+	<p id='there'></p>
+<script>
+function mumbo() {
+	document.getElementById("there").innerHTML = 'Java enabled is  ' + navigator.javaEnabled() + '!;
+}
+</script>
+</body>
+</html>
