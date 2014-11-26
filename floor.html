@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- http://www.w3schools.com/js/js_regexp.asp -->
+
+	<p>The pop method removes the last element from an array</p>
+
+	<button onclick='mumbo()'>randomizer</button>
+	<p id='there'></p>
+<script>
+var fruits = ["banana", "orange", "apple", "mango"];
+document.getElementById("demo").innerHTML = fruits;
+function mumbo() {
+	fruits.pop()
+	document.getElementById("there").innerHTML = fruits;
+}
+</script>
+</body>
+</html>
