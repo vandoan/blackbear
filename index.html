@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!-- http://www.w3schools.com/js/js_regexp.asp -->
+
+	<p>The length property provides an easy way to append new elements to an array without using the push() method</p>
+
+	<button onclick='mumbo()'>add with index!</button>
+	<p id='there'></p>
+<script>
+var fruits = ["banana", "orange", "apple", "mango"];
+document.getElementById("demo").innerHTML = fruits;
+function mumbo() {
+	fruits.unshift('lemon','grapes');
+	document.getElementById("there").innerHTML = fruits;
+}
+</script>
+</body>
+</html>
